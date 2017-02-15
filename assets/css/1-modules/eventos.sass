@@ -1,0 +1,87 @@
+.eventos-section
+  width: 100%
+  display: flex
+  justify-content: center
+  background-color: $evento-bg
+  position: relative
+  overflow: hidden
+  flex-direction: column
+  align-items: center
+  .overlay-evento
+    background-image: url(/assets/images/pattern-eventos.jpg)!important
+    background-repeat: repeat
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+    opacity: .1
+  .title-eventos
+    h2
+      font-size: 25px
+      text-transform: uppercase
+      color: #3D4456
+      position: relative
+      padding-bottom: 10px
+      margin-top: 20px
+      font-family: $roboto
+      // text-shadow: 1px 4px 5px rgba(0,0,0,.30)
+      &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 7px
+        background-color: #3D4456
+        bottom: 0
+        left: 0
+        transform: scale(.4)
+  .eventos-wrap
+    z-index: 1
+    display: flex
+    width: 800px
+    flex-wrap: wrap
+    margin:
+      top: 50px
+      bottom: 50px
+    .evento-content
+      width: 33.333%
+      margin-bottom: 15px
+      opacity: 0
+      &.show
+        animation: flipInY .8s
+        opacity: 1
+      p
+        text-transform: uppercase
+        font-weight: bold
+        color: $font-color
+        font-family: $roboto
+      img
+        box-shadow: 0 0 6px 2px rgba(128,128,128,.1)
+
+@media (max-width: 800px )
+  .eventos-section
+    .eventos-wrap
+      width: 700px
+      .evento-content
+        img
+          height: 140px
+          width: 190px
+
+@media (max-width: 665px )
+  .eventos-section
+    .eventos-wrap
+      width: 500px
+      .evento-content
+        width: 50%
+
+@media (max-width: 450px )
+  .eventos-section
+    .eventos-wrap
+
+      .evento-content
+        width: 100%
+        padding: 10px
+        img
+          width: 250px
+          height: 180px

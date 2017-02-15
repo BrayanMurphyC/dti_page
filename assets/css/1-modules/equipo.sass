@@ -1,0 +1,78 @@
+.equipo-section
+  width: 100%
+  display: flex
+  font-family: $roboto
+  justify-content: center
+  overflow: hidden
+  .equipo-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 800px
+    flex-direction: column
+    margin-top: 80px
+    h2
+      color: #3D4456
+      font-weight: bold
+      font-size: 20px
+      position: relative
+      padding-bottom: 12px
+      margin-bottom: 25px
+      &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 7px
+        background-color: #3D4456
+        bottom: 0
+        left: 0
+        transform: scale(.4)
+
+    .miembros
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      position: relative
+      justify-content: center
+      .miembro
+        width: 240px
+        display: flex
+        flex-direction: column
+        position: relative
+        opacity: 0
+        &.show
+          opacity: 1
+          animation: flipInY .4s
+        b
+          margin-top: 10px
+        span
+          margin-bottom: 30px
+        .img-profile
+          position: relative
+          img
+            border-radius: 50%
+            z-index: 2
+            position: relative
+            height: 170px
+          .color1
+            background: #FF654F
+          .color2
+            background: #056675
+          .color3
+            background: #5F5448
+          .color4
+            background: #78CFB4
+          .color5
+            background: #FFD17A
+          .color6
+            background: #FF7D7C
+          .semi-circulo
+             width: 180px
+             height: 95px
+             border-radius: 200px 200px 0 0
+             position: absolute
+             right: -8px
+             top: 60px
+             z-index: 0
+             transform-origin: center
+             transform: rotateZ(120deg)

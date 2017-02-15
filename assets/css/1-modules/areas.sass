@@ -1,0 +1,119 @@
+.areas-section
+  display: flex
+  width: 100%
+  overflow: hidden
+  .area
+    width: 33.333%
+    background-color: #fff
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    i
+      font-size: 65px
+      transform: scale(0)
+      transition: all ease-in-out .4s
+      margin:
+        top: 100px
+        bottom: 10px
+      &.show
+        transform: scale(1)
+    p
+      font-weight: bold
+      transition: all ease-in-out .5s
+      transform: scale(0)
+      color: white
+      font-size: 13px
+      // text-transform: uppercase
+      &.show
+        transform: scale(1)
+    span
+      font-weight: bold
+      padding: 8px
+      border-radius: 2px
+      transform: scale(0)
+      text-transform: capitalize
+      transition: all ease-in-out 1.5s
+      cursor: pointer
+      margin:
+        bottom: 100px
+      &.show
+        transform: scale(1)
+
+  .a1
+    background-image: url(/assets/images/img-of.jpg)
+    background-size: cover
+    background-position: center center
+    color: white
+    &:hover > i
+      background-image: url(/assets/images/of.gif)
+    & > i
+      background-image: url(/assets/images/of_n.png)
+      background-repeat: no-repeat
+      width: 100px
+      background-position: center center
+      background-size: contain
+      height: 100px
+    span
+      color: $font-color
+      background-color: #fff
+
+  .a2
+    background-image: url(/assets/images/img-pat.jpg)
+    background-size: cover
+    background-position: center center
+    color: $font-color
+    &:hover > i
+      background-image: url(/assets/images/ppi.gif)
+    & > i
+      background-image: url(/assets/images/ppi_n.png)
+      background-repeat: no-repeat
+      width: 100px
+      background-position: center center
+      background-size: contain
+      height: 100px
+    span
+      color: $font-color
+      background-color: white
+
+  .a3
+    background-image: url(/assets/images/img-emp.jpg)
+    background-size: cover
+    background-position: center center
+    color: $font-color
+    &:hover > i
+      background-image: url(/assets/images/ie.gif)
+    & > i
+      background-image: url(/assets/images/ie_n.png)
+      width: 100px
+      background-position: center center
+      background-size: contain
+      height: 100px
+    span
+      color: $font-color
+      background-color: white
+
+
+@media (max-width: 690px )
+  .areas-section
+    .area
+      p
+        font-size: 11px
+
+@media (max-width: 555px )
+  .areas-section
+    display: flex
+    width: 100%
+    flex-direction: column
+    .area
+      width: 100%
+      i
+        font-size: 50px
+        margin:
+          top: 30px
+          bottom: 0
+      span
+        padding: 5px
+        margin:
+          bottom: 30px

@@ -1,0 +1,91 @@
+.socios-section
+  display: flex
+  justify-content: center
+  background-color: #FFD17A
+  overflow: hidden
+  .socios-wrap
+    margin-top: 10px
+    margin-bottom: 10px
+    width: 600px
+    display: flex
+    justify-content: space-around
+    img
+      transform: scale(.8)
+
+.footer-section
+  width: 100%
+  height: 350px
+  position: relative
+  display: flex
+  justify-content: center
+  overflow: hidden
+  font-family: $roboto
+  background:
+    // image: url(/assets/images/portada.jpg)
+    color: #3D4456
+    size: cover
+    position: center center
+    repeat: no-repeat no-repeat
+  .overlay-footer
+    background-image: url(/assets/images/overlay-pattern.png)!important
+    background-repeat: repeat
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+  .footer-wrap
+    margin-top: 20px
+    width: 800px
+    display: flex
+    position: relative
+    justify-content: space-around
+    align-items: center
+    z-index: 1
+    .other
+      transform: scale(.7)
+    .contact
+      color: white
+      display: flex
+      flex-direction: column
+      .phone,.mail
+        font-size: 15px
+        margin-bottom: 10px
+      .social-icon
+        margin-top: 10px
+        font-size: 45px
+        display: flex
+        justify-content: center
+        i
+          transform: scale(1)
+          transition: transform ease-in-out .3s
+          margin-right: 8px
+          cursor: pointer
+          a
+            text-decoration: none
+            color: white
+          &:hover
+            transform: scale(1.2)
+
+@media (max-width: 520px )
+  .footer-section
+    .footer-wrap
+      height: 200px
+      flex-direction: column
+      .other
+        order: 0
+        transform: scale(.7)
+      .contact
+        order: 1
+        height: 100px
+        .phone,.mail
+          font-size: 15px
+          margin-top: 3px
+        .mail
+          margin-top: -5px
+        .social-icon
+          // margin-top: 10px
+          font-size: 40px
+          display: block
+          justify-content: center

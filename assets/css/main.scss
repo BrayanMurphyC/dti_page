@@ -1,4 +1,16 @@
 @import "0-tools/reset";
+@import "0-tools/animation";
+@import "2-vars/fonts";
+@import "2-vars/colors";
+@import "1-modules/header";
+@import "1-modules/about";
+@import "1-modules/areas";
+@import "1-modules/eventos";
+@import "1-modules/numeros";
+@import "1-modules/publicaciones";
+@import "1-modules/equipo";
+@import "1-modules/footer";
+@import "1-modules/header-of.sass";
 
 body {
     background: white;

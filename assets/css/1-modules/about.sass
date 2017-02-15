@@ -1,0 +1,177 @@
+.about-section
+  display: flex
+  justify-content: center
+  width: 100%
+  height: 420px
+  font-family: $roboto
+  flex-direction: column
+  background-color: #292B2C
+  position: relative
+  overflow: hidden
+  .overlay-about
+    background-image: url(/assets/images/overlay-pattern5.png)!important
+    background-repeat: repeat
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 2
+    opacity: .12
+  .mision
+    background-color: $vision
+  .vision
+    background-color: $vision
+  .valores
+    background-color: $vision
+  .proposito
+    background-color: $vision
+  .about-wrap
+    height: 100%
+    position: absolute
+    top: 0
+    display: flex
+    padding-top: 20px
+    padding-bottom: 60px
+    flex-direction: column
+    width: 100%
+    align-items: center
+    opacity: 0
+    &.show
+      opacity: 1
+      animation: jello .6s
+    .about-content
+      display: flex
+      width: 750px
+      flex-direction: column
+      h2
+        font-size: 26px
+        color: $bg-color
+        font-family: $roboto
+        position: relative
+        padding-bottom: 20px
+        margin-bottom: 5px
+        margin-top: 30px
+        &::after
+          content: ""
+          position: absolute
+          width: 100%
+          height: 30px
+          background-color: $bg-color
+          bottom: 0
+          left: 0
+          transform: scale(.11)
+      p
+        font-size: 15px
+        font-weight: normal
+        text-shadow: none
+        line-height: 2
+        text-align: justify
+        font-family: $roboto
+        padding:
+          right: 40px
+          left: 40px
+
+.wrap-slide
+  width: 100%
+  position: relative
+  display: flex
+  width: 100%
+  z-index: 3
+  background-color: $bg-color
+  justify-content: center
+  span
+    display: flex
+    justify-content: space-around
+    margin-top: -50px
+    .msg-btn
+      width: 30px
+      display: flex
+      flex-direction: column
+      align-items: center
+      position: relative
+      &:hover .shape
+        opacity: .3
+        color: white
+      .shape
+        position: absolute
+        top: -45px
+        opacity: 0
+        left: -15px
+        &.show
+          opacity: 1
+          animation: bounceIn .5s
+
+        .bubble
+          display: flex
+          cursor: pointer
+          align-items: center
+          justify-content: center
+          background-color: $bg-color
+          border-radius: 20px
+          height: 35px
+          width: 70px
+          text-transform: capitalize
+          transition: all ease-in-out .3s
+          font-size: 12px
+        .tip
+          display: block
+          width: 0
+          height: 0
+          border-left: 8px solid transparent
+          border-right: 8px solid transparent
+          border-top: 8px solid $bg-color
+          // margin-top: 16px
+          margin-left: 20px
+          margin-top: -2px
+
+
+
+      .bubble-mision
+        color: $vision
+      .bubble-vision
+        color: $vision
+      .bubble-valores
+        color: $vision
+      .bubble-proposito
+        color: $vision
+
+      .slide-button
+        display: block
+        width: 12px
+        border-radius: 10px
+        height: 12px
+        background-color: $bg-color
+        cursor: pointer
+
+@media (max-width: 660px )
+  .about-section
+    height: 450px
+    .about-wrap
+      .about-content
+        width: 500px
+  .wrap-slide
+    background-color: transparent
+    top: 10px
+    left: 10px
+    position: relative
+    span
+      margin-top: -40px
+      .msg-btn
+        .shape
+          display: none
+
+@media (max-width: 470px )
+  .about-section
+    .about-wrap
+      .about-content
+        width: 400px
+        p
+          font-size: 13px
+
+@media (max-width: 380px )
+  .about-section
+    height: 550px
+    .about-wrap
+      .about-content
+        width: 300px
