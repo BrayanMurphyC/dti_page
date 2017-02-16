@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
   "dependencies": {
+    "gulp-install": "^0.6.0",
     "snazzy-info-window": "^1.0.0"
   }
 }

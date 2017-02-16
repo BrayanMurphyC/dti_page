@@ -1,9 +1,11 @@
 section.socios-section
+
   .socios-wrap
-    img(src="/assets/images/socio1.png" )  
-    img(src="/assets/images/socio2.png" )  
-    img(src="/assets/images/socio3.png" )  
-section.footer-section
+    img(src="/assets/images/socio1.png" )
+    img(src="/assets/images/socio2.png" )
+    img(src="/assets/images/socio3.png" )
+section.footer-section(data-stellar-background-ratio="0.5"  data-stellar-vertical-offset="0")
+  .dark-footer
   .overlay-footer
   .footer-wrap
     .contact
@@ -16,7 +18,13 @@ section.footer-section
           a(href="https://www.youtube.com/channel/UCBbNSHmCDwwRkgty0H3wZcg" target="_blank").icon.icon-youtube
       .phone <b>Teléfono: </b>(062) - 591060
       .mail <b>Correo: </b>dti.vri@unheval.edu.pe
-      
+    .question
+        p ¿Alguna Consulta?
+        .form-consulta
+            input.field-q(type="text" placeholder="Email")
+            input.field-q(type="text" placeholder="Asunto")
+            textarea.consulta(placeholder="Mensaje")
+            input.btn-q(type="submit" value="Enviar")
     .other
       .logo-unheval
-        img(src="/assets/images/logo-unheval.png")    
+        img(src="/assets/images/logo-unheval.png")

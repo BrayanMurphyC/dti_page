@@ -1,9 +1,11 @@
 .pub-section
   width: 100%
+  height: 100vh
   display: flex
   align-items: center
+  justify-content: center
   flex-direction: column
-  background-color: #3D4456
+  background-color: white
   font-family: $roboto
   position: relative
   overflow: hidden
@@ -25,14 +27,14 @@
       top: 40px
     width: 200px
     height: 40px
-    background-color: #FFD17A
+    background-color:  #ff5252
     border-radius: 5px
     display: flex
     justify-content: center
     align-items: center
-    box-shadow: 0 0 10px 6px rgba(0,0,0,.12)
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.1)
     span
-      color: #3D4456
+      color: #eceff1
       text-transform: uppercase
       font-weight: bold
       display: flex
@@ -42,17 +44,17 @@
     h2
       font-size: 25px
       text-transform: uppercase
-      color: #FFD17A
+      color:  #ff5252
       position: relative
       padding-bottom: 10px
       margin-top: 20px
-      text-shadow: 2px 6px 5px rgba(0,0,0,.4)
+      // text-shadow: 2px 6px 5px rgba(0,0,0,.4)
       &::after
         content: ""
         position: absolute
         width: 100%
-        height: 7px
-        background-color: #FFD17A
+        height: 4px
+        background-color:  #ff5252
         bottom: 0
         left: 0
         transform: scale(.4)
@@ -66,13 +68,13 @@
       z-index: 1
       width: 45px
       height: 45px
-      color: #3D4456
-      background-color: #FFD17A
-      border-radius: 10px
+      color: #eceff1
+      background-color:  #ff5252
+      border-radius: 50%
       display: flex
       justify-content: center
       align-items: center
-      box-shadow: 0 0 10px 6px rgba(0,0,0,.12)
+      box-shadow: 0 0 5px 3px rgba(0,0,0,.1)
       span
         display: flex
     .pub-wrap
@@ -92,8 +94,10 @@
           display: flex
           justify-content: center
           flex-direction: column
-          background-color: #fff
-          box-shadow: 0 0 10px 6px rgba(0,0,0,.15)
+          background-color: #eceff1
+          border-radius: 5px
+          overflow: hidden
+          box-shadow: 0 0 3px 2px rgba(0,0,0,.1)
           width: 250px
           img
           .pub-body
