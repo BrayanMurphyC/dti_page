@@ -36,10 +36,13 @@ var i=0, j=1, left=0;
       if( j  < 4) {
         $('.about-wrap').removeClass('show').eq(j).addClass('show');
         $('.shape').removeClass('show').eq(j).addClass('show');
+        $('.slide-button').removeClass('show').eq(j).addClass('show');
          j++;
       }else {
         $('.about-wrap').removeClass('show').first().addClass('show');
         $('.shape').removeClass('show').first().addClass('show');
+        $('.slide-button').removeClass('show').first().addClass('show');
+
         j=1;
       }
   },6000,j);
@@ -247,6 +250,7 @@ function aboutSlide()
    position = $siblings.index($this);
     $('.about-wrap').removeClass('show').eq(position).addClass('show');
     $('.shape').removeClass('show').eq(position).addClass('show');
+    $('.slide-button').removeClass('show').eq(position).addClass('show');
 
 	});
 
@@ -297,3 +301,10 @@ function modal()
       $('.modal').addClass('hideModal')
     })
 }
+
+
+$(window).load(function(){
+	$.stellar({
+		horizontalScrolling:false
+	});
+});

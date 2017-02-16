@@ -1,76 +1,90 @@
 .about-section
   display: flex
   justify-content: center
+  align-items: center
   width: 100%
-  height: 420px
+  height: 100vh
   font-family: $roboto
-  flex-direction: column
-  background-color: #292B2C
+  background-image: url(/assets/images/bg-about.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  // background-color: #fff
   position: relative
   overflow: hidden
   .overlay-about
-    background-image: url(/assets/images/overlay-pattern5.png)!important
+    background-image: url(/assets/images/overlay-pattern.png)!important
     background-repeat: repeat
+    background-attachment: fixed
     height: 100%
     left: 0
     position: absolute
     top: 0
     width: 100%
     z-index: 2
-    opacity: .12
-  .mision
-    background-color: $vision
-  .vision
-    background-color: $vision
-  .valores
-    background-color: $vision
-  .proposito
-    background-color: $vision
-  .about-wrap
-    height: 100%
-    position: absolute
-    top: 0
+    opacity: .5
+  // .mision
+  //   background-color: $mision
+  // .vision
+  //   background-color: $vision
+  // .valores
+  //   background-color: $valores
+  // .proposito
+  //   background-color: $proposito
+  .about-container
+    width: 800px
+    height: 400px
+    position: relative
     display: flex
-    padding-top: 20px
-    padding-bottom: 60px
-    flex-direction: column
-    width: 100%
+    justify-content: center
     align-items: center
-    opacity: 0
-    &.show
-      opacity: 1
-      animation: jello .6s
-    .about-content
+    z-index: 2
+    .about-wrap
+      position: absolute
+      top: 0
       display: flex
-      width: 750px
+      padding-top: 20px
+      padding-bottom: 60px
       flex-direction: column
-      h2
-        font-size: 26px
-        color: $bg-color
-        font-family: $roboto
-        position: relative
-        padding-bottom: 20px
-        margin-bottom: 5px
-        margin-top: 30px
-        &::after
-          content: ""
-          position: absolute
-          width: 100%
-          height: 30px
-          background-color: $bg-color
-          bottom: 0
-          left: 0
-          transform: scale(.11)
-      p
-        font-size: 15px
-        font-weight: normal
-        text-shadow: none
-        line-height: 2
-        text-align: justify
-        font-family: $roboto
-        padding:
-          right: 40px
-          left: 40px
+      // width: 100%
+      justify-content: center
+      align-items: center
+      opacity: 0
+      &.show
+        opacity: 1
+        animation: fadeIn 1s
+      .about-content
+        display: block
+        width: 800px
+        flex-direction: column
+        h2
+          font-size: 40px
+          color: white
+          font-family: $roboto
+          position: relative
+          display: block
+          height: 70px
+          display: flex
+          justify-content: center
+          align-items: center
+
+        p
+          display: block
+          font-size: 18px
+          font-weight: normal
+          text-shadow: none
+          line-height: 2
+          text-align: justify
+          font-family: $roboto
+          // background-color: #fff
+          color: white
+          padding:
+            left: 50px
+            right: 50px
+            top: 10px
+          height: 270px
+          margin: 0
+
+
 
 .wrap-slide
   width: 100%
@@ -98,6 +112,7 @@
         top: -45px
         opacity: 0
         left: -15px
+        display: none
         &.show
           opacity: 1
           animation: bounceIn .5s
@@ -128,50 +143,50 @@
 
 
       .bubble-mision
-        color: $vision
+        color: $bg-color
       .bubble-vision
-        color: $vision
+        color: $bg-color
       .bubble-valores
-        color: $vision
+        color: $bg-color
       .bubble-proposito
-        color: $vision
+        color: $bg-color
 
       .slide-button
         display: block
-        width: 12px
+        width: 15px
         border-radius: 10px
-        height: 12px
-        background-color: $bg-color
+        height: 15px
+        background-color: rgba(white , .8)
         cursor: pointer
+        transition: all ease-in-out .3s
+        &.show
+          transform: scale(1.2)
 
-@media (max-width: 660px )
+@media (max-width: 720px )
   .about-section
-    height: 450px
-    .about-wrap
-      .about-content
-        width: 500px
-  .wrap-slide
-    background-color: transparent
-    top: 10px
-    left: 10px
-    position: relative
-    span
-      margin-top: -40px
-      .msg-btn
-        .shape
-          display: none
+    justify-content: center
+    align-items: flex-start
+    .about-container
+      margin-top: 50px
+      width: 600px
+      .about-wrap
+        .about-content
+          width: 100%
 
-@media (max-width: 470px )
+@media (max-width: 440px )
   .about-section
-    .about-wrap
-      .about-content
-        width: 400px
-        p
-          font-size: 13px
-
-@media (max-width: 380px )
-  .about-section
-    height: 550px
-    .about-wrap
-      .about-content
-        width: 300px
+    justify-content: center
+    align-items: flex-start
+    .about-container
+      margin-top: 50px
+      width: 600px
+      .about-wrap
+        .about-content
+          width: 100%
+          h2
+            font-size: 30px
+          p
+            padding:
+              left: 20px
+              right: 20px
+              top: 15px
